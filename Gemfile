@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.3"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-gem "pg"
+gem "pg", "~> 1.3.5"
 
 gem 'ed25519'
 gem 'bcrypt_pbkdf'

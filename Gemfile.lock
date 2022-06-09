@@ -262,7 +262,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   net-ssh (= 7.0.0.beta1)
-  pg
+  pg (~> 1.3.5)
   puma (~> 5.0)
   rails (~> 7.0.3)
   rspec
