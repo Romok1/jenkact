@@ -92,9 +92,9 @@ pipeline {
             }
         }
         stage('DB test') {
-             when {
-                     anyOf { branch 'feature/*'; branch 'develop' }
-            }
+              when {
+                   branch 'feature/*' 
+                 }
             steps {
                 script {
 			    CI_ERROR = "Failed: DB Test"
