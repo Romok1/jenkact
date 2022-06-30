@@ -93,7 +93,7 @@ pipeline {
         }
         stage('DB test') {
               when {
-                   branch 'feature/*' 
+                   branch 'feature/dev' 
                  }
             steps {
                 script {
@@ -110,7 +110,7 @@ pipeline {
             }
             post {
                   success {
-	    	      slackSend color : "danger", message: "Success - DB Test", channel: '#cicd'
+	    	      slackSend color : "good", message: "Success - DB Test", channel: '#cicd'
                       }
 	          failure{
                       slackSend color : "danger", message: "Failed - DB Test", channel: '#cicd'
@@ -132,7 +132,7 @@ pipeline {
 	     }
              post {
                   success {
-	    	         slackSend color : "danger", message: "rspec test was SUCCESSFUL", channel: '#cicd'
+	    	         slackSend color : "good", message: "rspec test was SUCCESSFUL", channel: '#cicd'
                         }
 	          failure{
                         slackSend color : "danger", message: "rspec test FAILED", channel: '#cicd'
